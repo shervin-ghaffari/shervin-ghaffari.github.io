@@ -15,9 +15,9 @@
             body{
                 margin: 0px;
                 padding: 0px;
-                height: 220vh;
+                height: 215vh;
                 box-sizing: border-box;
-                background-color: rgb(250, 205, 151);
+                background-color: rgb(255, 199, 162);
                 font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', 
                 Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
             }
@@ -28,12 +28,15 @@
             }
             header{
                 text-align: center;
-                background-color: rgb(63, 205, 193);
+                background-color: rgb(234, 175, 102);
                 width: 100%;
                 overflow: hidden;
             }
             p{
                 position: relative;
+                margin-top: -5px;
+                margin-bottom: 30px;
+                color: rgb(79, 77, 74);
                 left: 50%;
                 transform: translateX(-50%);
                 width: 40%;
@@ -43,6 +46,11 @@
             img{
                 width: 300px;
                 height: auto;
+            }
+            h1{
+                color: rgb(16, 94, 130);
+                font-size: 23px;
+                margin-bottom: 20px;
             }
             .container{
                 width: 90%;
@@ -60,7 +68,8 @@
             label{
                 position: absolute;
                 padding-left: 5px;
-                font-size: 18px;
+                font-size: 16px;
+                color: rgb(51, 66, 71);
                 left:0px;
                 top: -50%;
                 transform: translateY(-100%);
@@ -70,7 +79,7 @@
                 position: absolute;
                 border: none;
                 top: -50%;
-                color: rgb(57, 56, 56);
+                color: rgb(98, 98, 98);
                 transform: translateY(-100%);
                 padding-left: 5px;
                 font-size: 18px;
@@ -103,13 +112,13 @@
                 width: 100%;
                 height: 35px;
                 border-radius: 30px;
-                background-color: rgb(63, 205, 193);
+                background-color:  rgb(241, 177, 99);
                 color: rgb(51, 49, 46);
                 font-size: 20px;
                 cursor: pointer;
             }
             section #Send:hover{
-                background-color: rgb(16, 180, 166);
+                background-color:  rgb(232, 162, 76);
             }
         </style>
     </head>
@@ -118,7 +127,7 @@
 
         <div class="header_section">
             <header>
-                <h1>Sell Your Food</h1>
+                <h1 style="font-size: 26px;">Sell Your Food</h1>
                 <img src="/food.png" alt="food">
                 <p class="headerdetail">To sell your food enter your order details in the form below and then it will be shown to the users.</p>
             </header>
@@ -128,59 +137,56 @@
 
         <seaction class="container">
 
-            <section class="FoodDetail">
-                <div class ="FoodForm">
-                    <h1>Food Form</h1>
-                    <div class="devivder" style="height: 2px;background-color: black;width: 300px;"></div>
-                </div>
-            </section>
-
             <section id="FoodSection">
                 <form method="post">
+
+                    <section class="FoodDetail">
+                        <section class ="FoodForm">
+                            <h1>Food Form</h1>
+                            <span style="height: 2px;width: 200px;background-color: rgb(9, 61, 76);"></span >
+                        </section>
+                    </section>
+
                     <div>
-                        <input id = "Food" type="text" value="" required>
+                        <input id = "Food" type="text" value="" autocomplete="off" required>
                         <label for="">Food</label>
                     </div>
                     <div>
-                        <input id = "Quantity" type="text" value="" required>
+                        <input id = "Quantity" type="text" value="" autocomplete="off" required>
                         <label for="">Quantity</label>
                     </div> 
                     <div>
-                        <input id = "Price" type="text" value="" required>
+                        <input id = "Price" type="text" value="" autocomplete="off" required>
                         <label  for="">Price</label>
                     </div>
                     <div>
-                        <input id="Description" type="text" value="" required>
+                        <input id="Description" type="text" value="" autocomplete="off" required>
                         <label for="">Description</label>
                     </div>
-                </form>
 
-            </section>
+                <section id="AccountSection">
+                    <section class="AccountDetail">
+                        <section class ="AccountForm">
+                            <h1>Account Details</h1>
+                            <span style="height: 2px;width: 200px;background-color: rgb(9, 61, 76);"></span >
+                        </section>
+                    </section>
 
-            <section class="AccountDetail">
-                <div class ="AccountForm">
-                    <h1>Account Details</h1>
-                    <div class="devivder" style="height: 2px;background-color: black;width: 300px;"></div>
-                </div>
-            </section>
-
-            <section id="AccountSection">
-                <form method="post">
                     <div>
-                        <input id = "username" type="text" value="" required>
+                        <input id = "username" type="text" value="" autocomplete="off" required>
                         <label for="">Username</label>
                     </div>
                     <div>
-                        <input id = "password" type="password" value="" required>
+                        <input id = "password" type="password" value="" autocomplete="off" required>
                         <label for="">Password</label>
                     </div> 
-
                     <section id="button">
                         <input type="submit" value="Send" id="Send" onclick="send_data()" >
-                    </section>
+                 </section>
                 </form>
 
             </section>
+            
             <script>
                 function hide_keyboard(){
                     if(document.activeElement !=document.getElementById('Food')||
