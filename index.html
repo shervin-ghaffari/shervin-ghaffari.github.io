@@ -15,9 +15,9 @@
             body{
                 margin: 0px;
                 padding: 0px;
-                height: 200vh;
+                height: 140vh;
                 box-sizing: border-box;
-                background-color: rgb(130, 225, 181);
+                background-color: rgba(60, 57, 57, 0.966);
                 font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', 
                 Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
             }
@@ -28,7 +28,9 @@
             }
             header{
                 text-align: center;
-                background-color: rgb(234, 175, 102);
+                background-image: url("gray-grunge-surface-wall-texture-background.jpg");
+                background-size: cover;
+                background-repeat: no-repeat;
                 width: 100%;
                 overflow: hidden;
             }
@@ -36,7 +38,7 @@
                 position: relative;
                 margin-top: -5px;
                 margin-bottom: 30px;
-                color: rgb(33, 32, 31);
+                color: rgb(242, 242, 242);
                 left: 50%;
                 transform: translateX(-50%);
                 width: 40%;
@@ -48,14 +50,14 @@
                 height: auto;
             }
             h1{
-                color: rgb(27, 27, 27);
+                color: rgb(242, 242, 242);
                 font-size: 23px;
                 margin-bottom: 20px;
             }
             .container{
-                width: 90%;
+                width: 100%;
                 position: relative;
-                color: rgb(212, 212, 212);
+                color: rgb(242, 242, 242);
             }
             .FoodForm,.AccountForm{
                 position: relative;
@@ -68,8 +70,8 @@
             label{
                 position: absolute;
                 padding-left: 5px;
-                font-size: 16px;
-                color: rgb(19, 33, 37);
+                font-size: 17px;
+                color: rgb(242, 242, 242);
                 left:0px;
                 top: -50%;
                 transform: translateY(-100%);
@@ -79,7 +81,7 @@
                 position: absolute;
                 border: none;
                 top: -50%;
-                color: rgb(32, 32, 32);
+                color: rgb(242, 242, 242);
                 transform: translateY(-100%);
                 padding-left: 5px;
                 font-size: 18px;
@@ -92,36 +94,37 @@
                 position: relative;
                 margin: 80px 0px;
                 border-width: 1px;
-                width: 70%;
+                width: 80%;
                 border-bottom-style: groove;
-                border-bottom-color: rgb(22, 23, 22);
+                border-bottom-color: rgb(242, 242, 242);
                 left: 50%;
                 transform: translateX(-50%);
             }
             form div input:focus ~ label,form div input:valid ~ label{
                 top: -30px;
-                color: rgb(4, 68, 62);
+                color: rgb(151, 151, 151);
             }
             #button{
                 position: relative;
                 margin-bottom: 40px;
-                width: 70%;
+                width: 80%;
                 left: 50%;
                 transform: translateX(-50%);
             }
             section #Send{
                 width: 100%;
-                height: 35px;
+                height: 40px;
                 border-radius: 30px;
-                background-color:  rgb(10, 72, 122);
-                color: rgb(205, 205, 205);
+                margin-bottom: 40px;
+                background-color:  rgb(225, 225, 225);
+                color: rgb(50, 50, 50);
                 font-size: 20px;
                 outline: none;
                 border: none;
                 cursor: pointer;
             }
             section #Send:hover{
-                background-color:  rgb(232, 162, 76);
+                background-color:  rgb(174, 174, 174);
             }
         </style>
     </head>
@@ -131,7 +134,7 @@
         <div class="header_section">
             <header>
                 <h1 style="font-size: 26px;">Sell Your Food</h1>
-                <img src="/food.png" alt="food">
+                <img src="food.png" alt="food">
                 <p class="headerdetail">To sell your food enter your order details in the form below and then it will be shown to the users.</p>
             </header>
         </div>
@@ -146,7 +149,7 @@
                     <section class="FoodDetail">
                         <section class ="FoodForm">
                             <h1>Food Form</h1>
-                            <span style="height: 2px;width: 200px;background-color: rgb(9, 61, 76);"></span >
+                            <span style="height: 2px;width: 200px;background-color: rgb(234, 234, 234);"></span >
                         </section>
                     </section>
 
@@ -171,7 +174,7 @@
                     <section class="AccountDetail">
                         <section class ="AccountForm">
                             <h1>Account Details</h1>
-                            <span style="height: 2px;width: 200px;background-color: rgb(9, 61, 76);"></span >
+                            <span style="height: 2px;width: 200px;background-color: rgb(234, 234, 234);"></span >
                         </section>
                     </section>
 
