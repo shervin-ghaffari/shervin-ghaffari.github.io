@@ -1,227 +1,167 @@
 <!DOCTYPE html>
-
 <html lang="en">
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Shervin Ghaffari</title>
+</head>
+<body>
+        <nav id="nav">
+            <h3>Shervin Ghaffari</h3>
+            <ul>
+                <li><a href="#profile-container">About</a></li>
+                <li><a href="#skill-container">Skills</a></li>
+                <li><a href="#cv">CV</a></li>
+                <li><a href="#contact">Contact</a></li>       
+            </ul>
+            <script>
+                // JavaScript for smooth scrolling
+document.querySelectorAll('.navigation a').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
 
-        <title>SellerPage</title>
+        const targetId = this.getAttribute('href').substr(1);
+        const targetElement = document.getElementById(targetId);
 
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+        if (targetElement) {
+            targetElement.scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+    });
+});
 
-        <script src="https://telegram.org/js/telegram-web-app.js"></script>
+            </script>
+            <div class="navbar">
+                <div class="menu-btn">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#more-about-button">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#cv">CV</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+        <script>
+            const menuBtn = document.querySelector('.menu-btn');
+            const navLinks = document.querySelector('.nav-links');
 
-        <style>
+menuBtn.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+});
+        </script>
 
-            body{
-                margin: 0px;
-                padding: 0px;
-                height: 140vh;
-                background:linear-gradient(90deg, rgb(210, 164, 95) , rgb(32, 82, 93));
-                font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', 
-                Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            }
-            .header_section{
-                display: flex;
-                justify-content: center;
-                align-items: center;
-            }
-            header{
-                text-align: center;
-                background:linear-gradient(90deg, rgb(210, 164, 95) , rgb(32, 82, 93));
-                width: 100%;
-                overflow: hidden;
-            }
-            p{
-                position: relative;
-                margin-top: -5px;
-                margin-bottom: 30px;
-                color: rgb(223, 221, 221);
-                left: 50%;
-                transform: translateX(-50%);
-                width: 40%;
-                min-width: 300px;
-                text-align: center;
-            }
-            img{
-                width: 300px;
-                height: auto;
-            }
-            h1{
-                color: rgb(1, 57, 36);
-                font-size: 23px;
-                margin-bottom: 20px;
-            }
-            .container{
-                width: 100%;
-                position: relative;
-                color: rgb(242, 242, 242);
-            }
-            .FoodForm,.AccountForm{
-                position: relative;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                background: none;
-                margin-top: 20px;
-            }
-            label{
-                position: absolute;
-                padding-left: 5px;
-                font-size: 17px;
-                color: rgb(255, 251, 251);
-                left:0px;
-                top: -50%;
-                transform: translateY(-100%);
-                transition: 0.5s;
-            }
-            form div input{
-                position: absolute;
-                border: none;
-                top: -50%;
-                color: rgb(242, 242, 242);
-                transform: translateY(-100%);
-                padding-left: 5px;
-                font-size: 18px;
-                background: transparent;
-                outline: none;
-                height: 30px;
-                width: 100%;
-            }
-            form div{
-                position: relative;
-                margin: 80px 0px;
-                border-width: 1px;
-                width: 80%;
-                border-bottom-style: groove;
-                border-bottom-color: rgb(242, 242, 242);
-                left: 50%;
-                transform: translateX(-50%);
-            }
-            form div input:focus ~ label,form div input:valid ~ label{
-                top: -30px;
-                color: rgb(1, 57, 36);
-            }
-            #button{
-                position: relative;
-                margin-bottom: 40px;
-                width: 80%;
-                left: 50%;
-                transform: translateX(-50%);
-            }
-            section #Send{
-                width: 100%;
-                height: 40px;
-                border-radius: 30px;
-                margin-bottom: 40px;
-                background-color:  rgb(206, 206, 206);
-                color: rgb(50, 50, 50);
-                font-size: 20px;
-                outline: none;
-                border: none;
-                cursor: pointer;
-            }
-            section #Send:hover{
-                background-color:  rgb(174, 174, 174);
-            }
-        </style>
-    </head>
-
-    <body onclick="hide_keyboard()">
-
-        <div class="header_section">
-            <header>
-                <h1 style="font-size: 26px;">🍟 Sell Your Food 🍟</h1>
-                <img src="imP6EkukcLQNniL-Food-Plate-Top-View-Non-Veg-PNG.png" alt="food">
-                <p class="headerdetail">🟣 To sell your food enter your order details in the form below and then other users can see your order 🟣</p>
-            </header>
+    <header>
+        <div class="content" style="width: 100%;position: relative;">
+            <h1>Hi, I'm <br>Shervin Ghaffari</h1>
+            <p id="typewriter" style="position: absolute;">I'm </p>
+            <button id="more-about-button">More About Me</button>
+            <script src="script.js"></script>
         </div>
-        <div class="devivder" style="height: 2px;background-color: black;width: 100%;"></div>
 
+        <script>
+            document.getElementById("more-about-button").addEventListener("click", function() {
+    const aboutSection = document.getElementById("profile-container");
+    aboutSection.scrollIntoView({ behavior: "smooth" });
+});
+        </script>
 
-        <seaction class="container">
-
-            <section id="FoodSection">
-                <form method="post">
-
-                    <section class="FoodDetail">
-                        <section class ="FoodForm">
-                            <h1>🥙 Food Form 🥙</h1>
-                            <span style="height: 2px;width: 200px;background-color: rgb(214, 214, 214);"></span >
-                        </section>
-                    </section>
-
-                    <div>
-                        <input id = "Food" type="text" value="" autocomplete="off" required>
-                        <label for="">Food⭐️</label>
-                    </div>
-                    <div>
-                        <input id = "Quantity" type="tel" value="" autocomplete="off" required>
-                        <label for="">Quantity⭐️</label>
-                    </div> 
-                    <div>
-                        <input id = "Price" type="tel" value="" autocomplete="off" required>
-                        <label  for="">Price(toman)⭐️</label>
-                    </div>
-                    <div>
-                        <input id="Description" type="text" value="" autocomplete="off" required>
-                        <label for="">Description⭐️</label>
-                    </div>
-
-                <section id="AccountSection">
-                    <section class="AccountDetail">
-                        <section class ="AccountForm">
-                            <h1>🧾 Account 🧾</h1>
-                            <span style="height: 2px;width: 200px;background-color: rgb(214, 214, 214);"></span >
-                        </section>
-                    </section>
-
-                    <div>
-                        <input id = "Username" type="text" value="" autocomplete="off" required>
-                        <label for="">Username⭐️</label>
-                    </div>
-                    <div>
-                        <input id = "Password" type="password" value="" autocomplete="off" required>
-                        <label for="">Password⭐️</label>
-                    </div> 
-                    <section id="button">
-                        <input type="submit" value="Send" id="Send" onclick="send_data()" >
-                 </section>
-                </form>
-
-            </section>
-            
-            <script>
-                function hide_keyboard(){
-                    if(document.activeElement !=document.getElementById('Food')||
-                     document.activeElement !=document.getElementById('Quantity')||
-                     document.activeElement !=document.getElementById('Price')
-                     ||document.activeElement !=document.getElementById('Description'))
-                    document.getElementById("Food").blur
-                    document.getElementById("Quantity").blur
-                    document.getElementById("Price").blur
-                    document.getElementById("Description").blur
-                }
-            </script>
-
-            <script>
-                Telegram.WebApp.ready();
-                keys = ['Food','Quantity','Price','Description','Username','Password']
-                values = {'Food':'','Quantity':'','Price':'','Description':'','Username':'','Password':'','method':'sell'}
-                function send_data(){
-                    for (var key in keys) {
-                    if(document.getElementById(keys[key]).value == ""){
-                            return 
-                        }
-                    else
-                    values[keys[key]] = document.getElementById(keys[key]).value;
-                }
+        <div class="social-icons">
+            <a href="https://github.com/shervinghaffari79" class="icon"><img src="icons8-github-50.png" alt="Github"></a>
+            <!-- <a href="#" class="icon"><img src="icons8-twitter-50.png" alt="Twitter"></a> -->
+            <a href="https://www.linkedin.com/in/shervin-ghaffari" class="icon"><img src="icons8-linkedin-50.png" alt="LinkedIn"></a>
+            <a href="mailto:shervinghaffari79@gmail.com" class="icon"><img src="icons8-mail-48.png" alt="Mail"></a>
+        </div>
+    </header>
+    <script src="typewriter.js"></script>
+        <div class="profile-container" id="profile-container">
+            <div class="profile-image">
+                <img src="steptodown.com130989.jpg">
+            </div>
+            <div class="profile-description" id="profile-description">
+                <h1>About Me</h1>
+                <p>The dedicated Computer Science student at Amirkabir University of Technology. My academic journey has fueled my passion for Software Development, Networking, Distributed Systems, and AI. Alongside my studies, I'm actively engaged in research, currently working on surveys exploring the application of generative AI in the realm of e-commerce. I'm excited to connect with like-minded professionals and explore new opportunities in these fascinating fields. Feel free to connect with me here on LinkedIn to share insights and ideas</p>
+            </div>
+        </div>
+        <div class="skill-container" id="skill-container">
+            <section id="skills">
+                <h2>Skills</h2>
+                <div class="skill-button">HTML/CSS</div>
+                <div class="skill-button">JavaScript</div>
+                <div class="skill-button">Python</div>
+                <div class="skill-button">SQL</div>
+                <div class="skill-button">Java</div>
+                <div class="skill-button">PyCharm</div>
+                <div class="skill-button">IntelliJ IDEA</div>
+                <div class="skill-button">GitHub</div>
+                <div class="skill-button">LaTeX</div>
+                <div class="skill-button">MySQL</div>
+                <div class="skill-button">Tkinter</div>
                 
-                Telegram.WebApp.sendData(JSON.stringify(values));
-                Telegram.WebApp.close();
-                }
-            </script>
+            </section>
+            <div class="skill-image">
+                <img src="steptodown.com181313.jpg" Ghaffari>
+            </div>
+        </div>
+        <div class="profile-container">
+            <div class="profile-image">
+                <img src="steptodown.com963032.jpg" Ghaffari>
+            </div>
+            <section id="cv" class="cv">
+                <h2>CV</h2>
+                <p>Get a copy of my Curriculum Vitae (CV) to learn more about my educational background, work experience, and skills. My CV provides a comprehensive overview of my academic and professional journey, highlighting my passion for computer science, software development, and artificial intelligence. Feel free to download it and explore my qualifications in detail.</p>
+                <a href="cv-21.pdf" download target="_blank" download>
+                    <button id="cv-button" >Download</button>
+                </a>
+            </section>
+        </div>
+        <footer>
+            <h2 id="contact" style="color: rgb(28, 52, 55);">Contact Me</h2>
+            <div class="main">
+                <section id="find-me">
+                    <img src="icons8-location-50.png" alt="Email">
+                    <h3 style="color: rgb(28, 52, 55);">Find Me At</h3>
+                    <p >Mathematics and Computer Science Departement, Amirkabir University of Technology, Tehran, Iran</p>
+                </section>
+                <section id="contact-info">
+                    <img src="icons8-mail-48.png" alt="Email">
+                    <h3 style="color: rgb(28, 52, 55);">Email Me At</h3>
+                    <p><a style="color: rgb(76, 76, 76);" href="mailto:shervinghaffari79@gmail.com">shervinghaffari79@gmail.com</a></p>
+                </section>
 
-        </seaction>
-        
-    </body>
+                <section id="call-me">
+                    <img src="icons8-phone-64.png" alt="Phone">
+                    <h3 style="color: rgb(28, 52, 55);">Call Me At</h3>
+                    <a style="color: rgb(76, 76, 76);"tel:+1234567890>+98 9360311018</a>
+                </section>
+            </div>
+        </footer>
+
+        <div id="scroll-to-top" class="scroll-to-top">
+            <a href="#" id="scroll-to-top-link"><img src="icons8-arrow-up-50.png" alt="Scroll to Top"></a>
+        </div>
+
+        <script>
+            const scrollButton = document.getElementById('scroll-to-top');
+            const scrollButtonLink = document.getElementById('scroll-to-top-link');
+
+window.addEventListener('scroll', () => {
+if (window.scrollY > 300) { // Adjust this value as needed
+    scrollButton.style.display = 'block';
+} else {
+    scrollButton.style.display = 'none';
+}
+});
+
+scrollButtonLink.addEventListener('click', (e) => {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+        </script>
+</body>
 </html>
