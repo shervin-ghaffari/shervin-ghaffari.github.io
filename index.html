@@ -57,12 +57,14 @@ menuBtn.addEventListener('click', () => {
         </script>
 
     <header>
-        <div class="content" style="width: 100%;position: relative;">
+        <div class="content" style="width: 100%; position: relative;">
             <h1>Hey, I'm <br>Shervin Ghaffari</h1>
-            <p id="typewriter" style="position: absolute;"></p>
+            <div id="typewriter-container" style="display: flex;">
+                <p id="typewriter" style="position: absolute;"></p>
+            </div>
             <button id="more-about-button">More About Me</button>
             <script src="script.js"></script>
-        </div>
+        </div>        
 
         <script>
             document.getElementById("more-about-button").addEventListener("click", function() {
@@ -128,7 +130,7 @@ menuBtn.addEventListener('click', () => {
                     <h3 style="color: rgb(28, 52, 55);">Find Me At</h3>
                     <p >Mathematics and Computer Science Departement, Amirkabir University of Technology, Tehran, Iran</p>
                 </section>
-                <section id="contact-info">
+                 <section id="contact-info">
                     <img src="Resources/icons8-mail-48.png" alt="Email">
                     <h3 style="color: rgb(28, 52, 55);">Email Me At</h3>
                     <p><a style="color: rgb(76, 76, 76);" href="mailto:shervinghaffari79@gmail.com">shervinghaffari79@gmail.com</a></p>
